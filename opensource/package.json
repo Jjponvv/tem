@@ -7,9 +7,11 @@
     "vscode": "^1.100.0"
   },
   "categories": [
-    "Other"
+    "Formatters"
   ],
-  "activationEvents": [],
+  "author": {"name": "Jjponvv", "url": "https://github.com/Jjponvv"},
+  "icon": "temlogo.png",
+  "activationEvents": ["*"],
   "main": "./extension.js",
   "contributes": {
     "commands": [
