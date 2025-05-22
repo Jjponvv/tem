@@ -12,10 +12,24 @@
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "tem.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "tem.createFromTemplate", 
+        "title": "Create from template"
+      },
+      {
+        "command": "tem.addTemplate", 
+        "title": "Add template"
+      },
+      {
+        "command": "tem.editTemplate", 
+        "title": "Edit template"
+      },
+      {
+        "command": "tem.deleteTemplate", 
+        "title": "Delete template"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",

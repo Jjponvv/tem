@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+        <style>
+            body{
+                background: #000;
+                color: grey;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: 800;
+            }
+        </style>
+	</head>
+	<body>
+		<h2>Template creator</h2>
+		<label>Template name:</label>
+		<input type="text" id="name" style="border-radius: 6px; outline: none; text-decoration: none; margin: 10px;"/>
+		<label><br>Template extension(like .py, .cpp, ...):</label>
+		<input type="text" id="extension" style="border-radius: 6px; outline: none; text-decoration: none; margin: 10px;"/>
+        <br>
+		<textarea id="content" style="width: 700px; height: 700px; border-radius: 6px; outline: none; resize: none; user-select: text;" placeholder="// Type content here"></textarea>
+        <br>
+		<button onclick="save()" style="border-radius: 6px; outline: none; background: #fff; color: grey; font-size: 24px; font-family: 'Courier New', Courier, monospace;">Save template</button>
+		<script>
+			const vscode = acquireVsCodeApi();
+			function save()
+			{
+				const name = document.getElementById('name').value;
+				const extension = document.getElementById('extension').value;
+				const content = document.getElementById('content').value;
+				vscode.postMessage({command: 'saveTemplate', name, extension, content});
+			}
+		</script>
+	</body>
+</html>
