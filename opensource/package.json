@@ -10,6 +10,7 @@
     "Formatters"
   ],
   "author": {"name": "Jjponvv", "url": "https://github.com/Jjponvv"},
+  "publisher": "Jjponvv",
   "icon": "temlogo.png",
   "activationEvents": ["*"],
   "main": "./extension.js",
